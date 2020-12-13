@@ -1,0 +1,31 @@
+
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 13 02:41 ada_ppdev.c.stderr
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 13 02:41 ada_ppdev.c.stdout
+-rw-rw-r-- 1 wruslan wruslan    46 Dec 13 02:41 ada_ppdev.cswi
+-rw-rw-r-- 1 wruslan wruslan   167 Dec 13 02:41 ada_ppdev.d
+-rw-rw-r-- 1 wruslan wruslan 24914 Dec 13 02:45 ada_ppdev-loc.xml
+-rw-rw-r-- 1 wruslan wruslan 32248 Dec 13 02:41 ada_ppdev.o
+-rw-rw-r-- 1 wruslan wruslan 10190 Dec 13 02:41 b__main_ada_ppdev.adb
+-rw-rw-r-- 1 wruslan wruslan 23748 Dec 13 02:41 b__main_ada_ppdev.ads
+-rw-rw-r-- 1 wruslan wruslan 11688 Dec 13 02:41 b__main_ada_ppdev.ali
+-rw-rw-r-- 1 wruslan wruslan 19840 Dec 13 02:41 b__main_ada_ppdev.o
+-rw-rw-r-- 1 wruslan wruslan  6720 Dec 13 02:12 clang_ref_cache.db
+-rw-rw-r-- 1 wruslan wruslan 33528 Dec 13 02:41 libada_ppdev.a
+-rw-rw-r-- 1 wruslan wruslan    64 Dec 13 02:41 libada_ppdev.deps
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 13 02:41 main_ada_ppdev.adb.stderr
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 13 02:41 main_ada_ppdev.adb.stdout
+-rw-rw-r-- 1 wruslan wruslan 12095 Dec 13 02:41 main_ada_ppdev.ali
+-rw-rw-r-- 1 wruslan wruslan   667 Dec 13 02:41 main_ada_ppdev.bexch
+-rw-rw-r-- 1 wruslan wruslan    45 Dec 13 02:41 main_ada_ppdev.cswi
+-rw-rw-r-- 1 wruslan wruslan 28824 Dec 13 02:41 main_ada_ppdev.o
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 13 01:51 pkg_ada_dtstamp.adb.stderr
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 13 01:51 pkg_ada_dtstamp.adb.stdout
+-rw-rw-r-- 1 wruslan wruslan  7255 Dec 13 01:51 pkg_ada_dtstamp.ali
+-rw-rw-r-- 1 wruslan wruslan    45 Dec 13 01:51 pkg_ada_dtstamp.cswi
+-rw-rw-r-- 1 wruslan wruslan 19232 Dec 13 01:51 pkg_ada_dtstamp.o
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 13 02:41 pkg_ada_ppdev.ads.stderr
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 13 02:41 pkg_ada_ppdev.ads.stdout
+-rw-rw-r-- 1 wruslan wruslan  4385 Dec 13 02:41 pkg_ada_ppdev.ali
+-rw-rw-r-- 1 wruslan wruslan    45 Dec 13 02:41 pkg_ada_ppdev.cswi
+-rw-rw-r-- 1 wruslan wruslan   984 Dec 13 02:41 pkg_ada_ppdev.o
+

@@ -1,0 +1,85 @@
+// File: all-ada-ppdev-functions-ver-0.5.txt
+// Date: Sun 13 Dec 2020 01:56:12 PM +08
+// Author: WRY
+// ========================================================
+
+// ppdev.h = User-space parallel port device driver (header file).
+
+// LOCATION OF FILE: /usr/include/uapi/linux/ppdev.h 
+
+// ========================================================
+/* Set mode for read/write (e.g. IEEE1284_MODE_EPP) */
+// DONE (11) #define PPSETMODE	_IOW(PP_IOCTL, 0x80, int)
+
+/* Read status */
+// DONE (8) #define PPRSTATUS	_IOR(PP_IOCTL, 0x81, unsigned char)
+
+/* Read/write control */
+// DONE (9)  #define PPRCONTROL	_IOR(PP_IOCTL, 0x83, unsigned char)
+// DONE (10) #define PPWCONTROL	_IOW(PP_IOCTL, 0x84, unsigned char)
+
+/*
+struct ppdev_frob_struct {
+	unsigned char mask;
+	unsigned char val;
+};
+*/
+
+// DONE (4) (6) #define PPFCONTROL  _IOW(PP_IOCTL, 0x8e, struct ppdev_frob_struct)
+
+/* Read/write data */
+// DONE (7) #define PPRDATA		_IOR(PP_IOCTL, 0x85, unsigned char)
+// DONE (5) #define PPWDATA		_IOW(PP_IOCTL, 0x86, unsigned char)
+
+/* Claim the port to start using it */
+// DONE (2) #define PPCLAIM		_IO(PP_IOCTL, 0x8b)
+
+/* Release the port when you aren't using it */
+// DONE (2NDLAST)  #define PPRELEASE	_IO(PP_IOCTL, 0x8c)
+
+/* Yield the port (release it if another driver is waiting, then reclaim) */
+// DONE (12) #define PPYIELD		_IO(PP_IOCTL, 0x8d)
+
+/* Register device exclusively (must be before PPCLAIM). */
+// DONE (13) #define PPEXCL		_IO(PP_IOCTL, 0x8f)
+
+/* Data line direction: non-zero for input mode. */
+// DONE (14) #define PPDATADIR	_IOW(PP_IOCTL, 0x90, int)
+
+/* Negotiate a particular IEEE 1284 mode. */
+// DONE (3) #define PPNEGOT		_IOW(PP_IOCTL, 0x91, int)
+
+/* Set control lines when an interrupt occurs. */
+// DONE (15) #define PPWCTLONIRQ	_IOW(PP_IOCTL, 0x92, unsigned char)
+
+/* Clear (and return) interrupt count. */
+// DONE (16) #define PPCLRIRQ	_IOR(PP_IOCTL, 0x93, int)
+
+/* Set the IEEE 1284 phase that we're in (e.g. IEEE1284_PH_FWD_IDLE) */
+// DONE (17) #define PPSETPHASE	_IOW(PP_IOCTL, 0x94, int)
+
+/* Set and get port timeout (struct timeval's) */
+// DONE (18) #define PPGETTIME	_IOR(PP_IOCTL, 0x95, struct timeval)
+// NOT ALLOWED. (19) #define PPSETTIME	_IOW(PP_IOCTL, 0x96, struct timeval)
+
+/* Get available modes (what the hardware can do) */
+// DONE (20) #define PPGETMODES	_IOR(PP_IOCTL, 0x97, unsigned int)
+
+/* Get the current mode and phaze */
+// DONE (21) #define PPGETMODE	_IOR(PP_IOCTL, 0x98, int)
+// DONE (22) #define PPGETPHASE	_IOR(PP_IOCTL, 0x99, int)
+
+/* get/set flags */
+// DONE (23) #define PPSETFLAGS	_IOW(PP_IOCTL, 0x9b, int)
+// DONE (24) #define PPGETFLAGS	_IOR(PP_IOCTL, 0x9a, int)
+
+/* flags visible to the world */
+// DONE #define PP_FASTWRITE	(1<<2)
+// DONE #define PP_FASTREAD		(1<<3)
+// DONE #define PP_W91284PIC	(1<<4)
+
+/* only masks user-visible flags */
+// DONE #define PP_FLAGMASK	(PP_FASTWRITE | PP_FASTREAD | PP_W91284PIC)
+
+===========================================================
+

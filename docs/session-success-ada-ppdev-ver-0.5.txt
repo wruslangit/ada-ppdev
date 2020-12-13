@@ -1,0 +1,354 @@
+File: session-success-ada-ppdev-ver-0.5.txt
+Date: Sun 13 Dec 2020 02:07:32 PM +08
+Author: WRY
+
+===========================================================
+COMPUTING ENVIRONMENT
+===========================================================
+Ub2004-rt38:~/wks-gnat/parport-ada/exec$ date
+Fri 11 Dec 2020 10:24:52 PM +08
+
+Ub2004-rt38:~/wks-gnat/parport-ada/exec$ uname -a
+Linux HPEliteBook8470p-Ub2004-rt38 5.4.66-rt38 
+#1 SMP PREEMPT_RT Sat Sep 26 16:51:59 +08 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+Ub2004-rt38:~/wks-gnat/parport-ada/exec$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.1 LTS
+Release:	    20.04
+Codename:	    focal
+Ub2004-rt38:~/wks-gnat/parport-ada/exec$ 
+
+==========================================================
+COMPILATION
+==========================================================
+gprbuild -d -P/home/wruslan/wks-gnat/parport-ada/parport_ada.gpr -s -k
+Compile
+   [Ada]          parport_ada_main.adb
+   [C]            ada_ppdev.c
+   [C]            spp_ppdev.c
+   [Ada]          pkg_ada_call_c_iface.ads
+   [Ada]          pkg_ada_call_ppdev_iface.ads
+   [Ada]          pkg_ada_dtstamp.adb
+Bind
+   [gprbind]      parport_ada_main.bexch
+   [Ada]          parport_ada_main.ali
+Link
+   [archive]      libparport_ada.a
+   [index]        libparport_ada.a
+   [link]         parport_ada_main.adb
+[2020-12-11 22:18:16] process terminated successfully, elapsed time: 01.55s
+
+===========================================================
+EXECUTION
+===========================================================
+Ub2004-rt38:~/wks-gnat/parport-ada/exec$ sudo ./parport_ada_main.xxx 
+2020-12-11 14:22:34.25937113298 Bismillah 3 times WRY
+2020-12-11 14:22:34.25937132292 Running inside GNAT Studio Community (20200427)
+
+USING INTERFACE API ada_ppdev.c AND ada_ppdev.h 
+=================================================
+(1) Success. Open parallel port /dev/parport0 , fd_attrib_ada = 2 , result1 fd_ada = 3 
+2020-12-11 14:22:34.25937206947 GetC_ada_open_parport(port, fd_attrib) : fd result1 =  3
+(11) Success. Set PPSETMODE for fd_ada = 3, modetoset = 8, result11 = 0 
+2020-12-11 14:22:34.25937252271 GetC_ada_ioctl_ppsetmode_parport(fd, modetoset) : result11 =  0
+(2) Success. Request PPCLAIM access to the_port /dev/parport0 , fd_ada = 3 , result2 = 0 
+2020-12-11 14:22:34.25937463413 GetC_ada_ioctl_ppclaim_parport(fd) : result2 =  0
+(3) Success. Negotiate/configure the_port for mode_ada = 8 result3 = 0 
+2020-12-11 14:22:34.25937490524 GetC_ada_ioctl_ppnegot_mode(fd, modetoset) : result3 =  0
+(4) Success. Assert latch's OUTPUTENABLE PPFCONTROL frob signal, result4 = 0 
+2020-12-11 14:22:34.25937516721 GetC_ada_ioctl_ppfcontrol_frob1 : result4 =  0
+2020-12-11 14:22:34.25937536279 GetC_ada_ioctl_ppdatadir_dataport(fd, datadirection) : result14 =  0
+(5) Success. Write value to PPWDATA register 	UCHAR= � 	INT= 215 	HEX= 0xd7 	BIN= 11010111
+2020-12-11 14:22:34.25937569851 GetC_ada_ioctl_ppwdata_writedataregister(fd, datatowrite) : result5 =  0
+2020-12-11 14:22:34.25937592896 GetC_ada_ioctl_ppfcontrol_frob2 : result6 =  0
+(7) Success. Read value of PPRDATA register 	UCHAR= � 	INT= 215 	HEX= 0xd7 	BIN= 11010111
+2020-12-11 14:22:34.25937626787 GetC_ada_ioctl_pprdata_readdataregister(fd) : result7 =  0
+(8) Success. Read value of PPRSTATUS register 	UCHAR= x 	INT= 120 	HEX= 0x78 	BIN= 01111000
+(8) ERROR: Unknown signal for PARPORT_STATUS 
+2020-12-11 14:22:34.25937665247 GetC_ada_ioctl_pprstatus_readstatusregister(fd) : result8 =  0
+(10) Success. Write value PPWCONTROL register 	UCHAR=  	INT= 4 	HEX= 0x4 	BIN= 00000100
+2020-12-11 14:22:34.25937691447 GetC_ada_ioctl_ppwcontrol_writecontrolregister(fd, controltowrite) : result10 =  0
+(9) Success. Read value of PPRCONTROL register 	UCHAR=  	INT= 4 	HEX= 0x4 	BIN= 00000100
+(9) Control: PARPORT_CONTROL_INIT 
+2020-12-11 14:22:34.25937720725 GetC_ada_ioctl_pprcontrol_readcontrolregister(fd) : result9 =  0
+2020-12-11 14:22:34.25937739332 GetC_ada_ioctl_ppyield_parport(fd) : result12 =  0
+(15) Success. Set/Write control lines when an interrupt occurs PPWCTLONIRQ. fd_ada = 3 , IRQ = 5 , result15 = 0 
+2020-12-11 14:22:34.25937762035 GetC_ada_ioctl_ppwctlonirq_controlport(fd, the_interrupt) : result15 =  0
+(16) IRQ before clear = 5 
+(16) Success. Clear (and return) interrupt count PPCLRIRQ. fd_ada = 3 , IRQ = 0 , IRQ_Count = result16 = 0 
+(16) IRQ after clear = 0 
+2020-12-11 14:22:34.25937790582 GetC_ada_ioctl_ppclrirq_controlport(fd, the_interrupt) : result16 =  0
+(17) Success. Set the IEEE 1284 phase PPSETPHASE. fd_ada = 3 , ieee1284_phase = 1 , result17 = 0 
+(17) IEEE1284 Phase after set = 1 
+2020-12-11 14:22:34.25937818096 GetC_ada_ioctl_ppsetphase_parport(fd, the_phase) : result17 =  0
+(17) Success. Set the IEEE 1284 phase PPSETPHASE. fd_ada = 3 , ieee1284_phase = 9 , result17 = 0 
+(17) IEEE1284 Phase after set = 9 
+2020-12-11 14:22:34.25937842251 GetC_ada_ioctl_ppsetphase_parport(fd, the_phase) : result17 =  0
+Time from epoch: 
+the_seconds= 1607696554 
+the_microseconds= 258473 
+(18) Success.Get port time PPGETTIME. fd_ada = 3 , result18 = 0 
+Returned datetime = 2020-12-11 22:22:34.258473 
+2020-12-11 14:22:34.25937937889 GetC_ada_ioctl_ppgettime_usec_parport(fd) : result18 =  0
+(20) Success. Get available modes (hardware capabilities). fd_ada = 3 , result20 = 0 
+(20) Hardware the_ppmodes INT= 95 BIN= 01011111
+PARPORT_MODE_PCSPP 
+PARPORT_MODE_TRISTATE 
+PARPORT_MODE_EPP 
+PARPORT_MODE_ECP 
+PARPORT_MODE_COMPAT 
+PARPORT_MODE_SAFEININT 
+2020-12-11 14:22:34.25938000284 GetC_ada_ioctl_ppgetmodes_parport(fd, the_ppmodes) : result20 =  0
+(21) Success. Get the current mode PPGETMODE. fd_ada = 3 , result21 = 0 
+(21) Current parport mode INT= 8 BIN= 00001000
+PARPORT_MODE_ECP 
+2020-12-11 14:22:34.25938020486 GetC_ada_ioctl_ppgetmode_current(fd, curr_ppmode) : result21 =  0
+(22) Success. Get the current phase PPGETPHASE. fd_ada = 3 , result22 = 0 
+(22) Current parport phase INT= 9 BIN= 00001001
+(22) Phase: IEEE1284_PH_ECP_FWD_TO_REV 
+2020-12-11 14:22:34.25938039488 GetC_ada_ioctl_ppgetphase_current(fd, curr_ppphase) : result22 =  0
+(23) the_mask INT= 28 BIN= 00011100
+(23) Success. Set parport flag PPSETFLAGS. fd_ada = 3 , the_flags = 8 , result23 = 0 
+(23) Set parport flags = PP_FASTREAD 
+2020-12-11 14:22:34.25938058888 GetC_ada_ioctl_ppsetflags_parport(fd, the_flags) : result23 =  0
+(24) Success. Get parport flag PPSETFLAGS. fd_ada = 3 , the_flags = 8 , result24 = 0 
+(24) Flags: PP_FASTREAD	
+2020-12-11 14:22:34.25938075202 GetC_ada_ioctl_ppgetflags_parport(fd, the_flags) : result24 =  0
+2020-12-11 14:22:34.25938088182 GetC_ada_ioctl_pprelease_parport : result2ndlast =  0
+2020-12-11 14:22:34.30983415345 GetC_ada_close_parport(fd) : resultlast =  0
+
+2020-12-11 14:22:34.30983502514 Alhamdulillah 3 times WRY
+Ub2004-rt38:~/wks-gnat/parport-ada/exec$ 
+
+===========================================================
+COVERAGE OF ada_ppdev.h
+===========================================================
+/* USER SPACE PARALLEL PORT USING PPDEV
+ * File: ada_ppdev.h
+ *
+ *  Created on: Dec 4, 2020
+ *      Author: wruslan
+=========================================================== 
+*/
+
+#ifndef _ADA_PPDEV_H_
+#define _ADA_PPDEV_H_
+
+// ========================================================
+int ada_open_parport(const char *the_port, int fd_attrib);
+int ada_ioctl_ppexcl_parport(int fd_ada);
+int ada_ioctl_ppclaim_parport(int fd_ada);
+int ada_ioctl_ppnegot_mode(int fd_ada, int modetoset);
+int ada_ioctl_ppsetmode_parport(int fd_ada, int modetoset);
+int ada_ioctl_ppfcontrol_frob1(void);
+int ada_ioctl_ppfcontrol_frob2(void);
+
+int ada_ioctl_pprdata_readdataregister(int fd_ada);
+int ada_ioctl_pprstatus_readstatusregister(int fd_ada);
+int ada_ioctl_pprcontrol_readcontrolregister(int fd_ada);
+
+int ada_ioctl_ppwdata_writedataregister(int fd_ada, int datatowrite);
+// No write for status register. Only read status register.
+int ada_ioctl_ppwcontrol_writecontrolregister(int fd_ada, int controltowrite);
+
+int ada_ioctl_ppyield_parport(int fd_ada);
+int ada_ioctl_ppdatadir_dataport(int fd_ada, int datadirection);
+int ada_ioctl_ppwctlonirq_controlport(int fd_ada, int the_interrupt);
+int ada_ioctl_ppclrirq_controlport(int fd_ada, int the_interrupt);
+int ada_ioctl_ppsetphase_parport(int fd_ada, int the_phase);
+int ada_ioctl_ppgettime_usec_parport(int fd); 
+// ppsettime_used is not allowed.
+int ada_ioctl_ppgetmodes_parport(int fd_ada, int the_ppmodes);
+int ada_ioctl_ppgetmode_current(int fd_ada, int curr_ppmode);
+int ada_ioctl_ppgetphase_current(int fd_ada, int curr_ppphase);
+int ada_ioctl_ppsetflags_parport(int fd_ada, int the_flags);
+int ada_ioctl_ppgetflags_parport(int fd_ada, int the_flags);
+
+int ada_ioctl_pprelease_parport(void);
+int ada_close_parport(int fd);
+// ========================================================
+
+#endif /* _ADA_PPDEV_H_ */
+
+===========================================================
+COVERAGE OF ppdev.h (SEE DONE LINES) Ha ha ha.
+===========================================================
+
+/* Set mode for read/write (e.g. IEEE1284_MODE_EPP) */
+// DONE (11) #define PPSETMODE	_IOW(PP_IOCTL, 0x80, int)
+
+/* Read status */
+// DONE (8) #define PPRSTATUS	_IOR(PP_IOCTL, 0x81, unsigned char)
+
+/* Read/write control */
+// DONE (9)  #define PPRCONTROL	_IOR(PP_IOCTL, 0x83, unsigned char)
+// DONE (10) #define PPWCONTROL	_IOW(PP_IOCTL, 0x84, unsigned char)
+
+// struct ppdev_frob_struct {
+//	unsigned char mask;
+//	unsigned char val;
+// };
+// DONE (4) (6) #define PPFCONTROL  _IOW(PP_IOCTL, 0x8e, struct ppdev_frob_struct)
+
+/* Read/write data */
+// DONE (7) #define PPRDATA		_IOR(PP_IOCTL, 0x85, unsigned char)
+// DONE (5) #define PPWDATA		_IOW(PP_IOCTL, 0x86, unsigned char)
+
+/* Claim the port to start using it */
+// DONE (2) #define PPCLAIM		_IO(PP_IOCTL, 0x8b)
+
+/* Release the port when you aren't using it */
+// DONE (2NDLAST)  #define PPRELEASE	_IO(PP_IOCTL, 0x8c)
+
+/* Yield the port (release it if another driver is waiting, then reclaim) */
+// DONE (12) #define PPYIELD		_IO(PP_IOCTL, 0x8d)
+
+/* Register device exclusively (must be before PPCLAIM). */
+// DONE (13) #define PPEXCL		_IO(PP_IOCTL, 0x8f)
+
+/* Data line direction: non-zero for input mode. */
+// DONE (14) #define PPDATADIR	_IOW(PP_IOCTL, 0x90, int)
+
+/* Negotiate a particular IEEE 1284 mode. */
+// DONE (3) #define PPNEGOT		_IOW(PP_IOCTL, 0x91, int)
+
+/* Set control lines when an interrupt occurs. */
+// DONE (15) #define PPWCTLONIRQ	_IOW(PP_IOCTL, 0x92, unsigned char)
+
+/* Clear (and return) interrupt count. */
+// DONE (16) #define PPCLRIRQ	_IOR(PP_IOCTL, 0x93, int)
+
+/* Set the IEEE 1284 phase that we're in (e.g. IEEE1284_PH_FWD_IDLE) */
+// DONE (17) #define PPSETPHASE	_IOW(PP_IOCTL, 0x94, int)
+
+/* Set and get port timeout (struct timeval's) */
+// DONE (18) #define PPGETTIME	_IOR(PP_IOCTL, 0x95, struct timeval)
+// NOT ALLOWED. (19) #define PPSETTIME	_IOW(PP_IOCTL, 0x96, struct timeval)
+
+/* Get available modes (what the hardware can do) */
+// DONE (20) #define PPGETMODES	_IOR(PP_IOCTL, 0x97, unsigned int)
+
+/* Get the current mode and phaze */
+// DONE (21) #define PPGETMODE	_IOR(PP_IOCTL, 0x98, int)
+// DONE (22) #define PPGETPHASE	_IOR(PP_IOCTL, 0x99, int)
+
+/* get/set flags */
+// DONE (23) #define PPSETFLAGS	_IOW(PP_IOCTL, 0x9b, int)
+// DONE (24) #define PPGETFLAGS	_IOR(PP_IOCTL, 0x9a, int)
+
+/* flags visible to the world */
+// DONE #define PP_FASTWRITE	(1<<2)
+// DONE #define PP_FASTREAD		(1<<3)
+// DONE #define PP_W91284PIC	(1<<4)
+
+/* only masks user-visible flags */
+// DONE #define PP_FLAGMASK	(PP_FASTWRITE | PP_FASTREAD | PP_W91284PIC)
+
+===========================================================
+
+The transformation/conversion from ppdev.h into ada_ppdev.h is shown above.
+
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY.
+===========================================================
+Ub2004-rt38:~/wks-gnat/parport-ada$ tree ./
+./
+├── exec
+│   └── parport_ada_main.xxx
+├── obj
+│   ├── ada_ppdev.c.stderr
+│   ├── ada_ppdev.c.stdout
+│   ├── ada_ppdev.cswi
+│   ├── ada_ppdev.d
+│   ├── ada_ppdev.o
+│   ├── b__parport_ada_main.adb
+│   ├── b__parport_ada_main.ads
+│   ├── b__parport_ada_main.ali
+│   ├── b__parport_ada_main.o
+│   ├── clang_ref_cache.db
+│   ├── dtstamp.c.stderr
+│   ├── dtstamp.c.stdout
+│   ├── dtstamp.cswi
+│   ├── dtstamp.d
+│   ├── dtstamp.o
+│   ├── gpsauto.cgpr
+│   ├── libparport_ada.a
+│   ├── libparport_ada.deps
+│   ├── lp.c.stderr
+│   ├── lp.c.stdout
+│   ├── parport_ada-loc.xml
+│   ├── parport_ada_main.adb.stderr
+│   ├── parport_ada_main.adb.stdout
+│   ├── parport_ada_main.ali
+│   ├── parport_ada_main.bexch
+│   ├── parport_ada_main.cswi
+│   ├── parport_ada_main.o
+│   ├── parport_pc.c.stderr
+│   ├── parport_pc.c.stdout
+│   ├── pkg_ada_call_c_iface.ads.stderr
+│   ├── pkg_ada_call_c_iface.ads.stdout
+│   ├── pkg_ada_call_c_iface.ali
+│   ├── pkg_ada_call_c_iface.cswi
+│   ├── pkg_ada_call_c_iface.o
+│   ├── pkg_ada_call_ppdev_iface.ads.stderr
+│   ├── pkg_ada_call_ppdev_iface.ads.stdout
+│   ├── pkg_ada_call_ppdev_iface.ali
+│   ├── pkg_ada_call_ppdev_iface.cswi
+│   ├── pkg_ada_call_ppdev_iface.o
+│   ├── pkg_ada_dtstamp.adb.stderr
+│   ├── pkg_ada_dtstamp.adb.stdout
+│   ├── pkg_ada_dtstamp.ali
+│   ├── pkg_ada_dtstamp.cswi
+│   ├── pkg_ada_dtstamp.o
+│   ├── ppdev.c.stderr
+│   ├── ppdev.c.stdout
+│   ├── spp_ppdev.c.stderr
+│   ├── spp_ppdev.c.stdout
+│   ├── spp_ppdev.cswi
+│   ├── spp_ppdev.d
+│   ├── spp_ppdev.o
+│   ├── spp-using-ppdev.c.stderr
+│   ├── spp-using-ppdev.c.stdout
+│   ├── spp-using-ppdev.cswi
+│   ├── spp-using-ppdev.d
+│   └── spp-using-ppdev.o
+├── parport_ada.gpr
+├── src
+│   ├── ada-dtstamp
+│   │   ├── pkg_ada_dtstamp.adb
+│   │   └── pkg_ada_dtstamp.ads
+│   ├── c-parport
+│   │   ├── ada_ppdev.c
+│   │   ├── ada_ppdev.h
+│   │   ├── spp_ppdev.c
+│   │   └── spp_ppdev.h
+│   ├── c-pkg-iface
+│   │   ├── pkg_ada_call_c_iface.ads
+│   │   └── pkg_ada_call_ppdev_iface.ads
+│   ├── c-utils
+│   │   └── ppdev.h
+│   └── parport_ada_main.adb
+└── docs
+    ├── ada-all-ppdev-functions.txt
+    ├── all-parport-headers-and-codes
+    │   ├── lp.c
+    │   ├── lp.h
+    │   ├── parport.h
+    │   ├── parport_pc.c
+    │   ├── parport_pc.h
+    │   ├── ppdev.c
+    │   └── ppdev.h
+    ├── all-parport-headers-only
+    │   ├── fcntl.h
+    │   ├── lp.h
+    │   ├── parport.h
+    │   ├── parport_pc.h
+    │   └── ppdev.h
+    └── session-success-ada-ppdev-0.5.txt  <=== THIS FILE
+
+10 directories, 82 files
+Ub2004-rt38:~/wks-gnat/parport-ada$ 
+
+===========================================================

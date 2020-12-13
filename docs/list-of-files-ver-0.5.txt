@@ -1,0 +1,59 @@
+// File: list-of-files-ver-0.5.txt
+// Date: Sun 13 Dec 2020 01:56:12 PM +08
+// Author: WRY
+// ========================================================
+
+// List of files inside ada-ppdev-ver-0.5 directory 
+
+Ub2004-rt38:~$ ls -al ./ada-ppdev-0.5/
+-rw-rw-r-- 1 wruslan wruslan 4084 Dec 12 13:43 ada_ppdev.gpr
+drwxrwxr-x 4 wruslan wruslan 4096 Dec 13 14:01 docs
+drwxrwxr-x 2 wruslan wruslan 4096 Dec 13 13:39 exec
+drwxrwxr-x 2 wruslan wruslan 4096 Dec 13 13:39 obj
+drwxrwxr-x 6 wruslan wruslan 4096 Dec 13 01:46 src
+Ub2004-rt38:~$
+
+===========================================================
+Ub2004-rt38:~$ tree ./ada-ppdev-0.5/
+./ada-ppdev-0.5/
+├── ada_ppdev.gpr
+├── docs
+│   ├── all-ada-ppdev-functions-ver-0.5.txt
+│   ├── all-parport-headers-and-codes
+│   │   ├── lp.c
+│   │   ├── lp.h
+│   │   ├── parport.h
+│   │   ├── parport_pc.c
+│   │   ├── parport_pc.h
+│   │   ├── ppdev.c
+│   │   └── ppdev.h
+│   ├── all-parport-headers-only
+│   │   ├── fcntl.h
+│   │   ├── lp.h
+│   │   ├── parport.h
+│   │   ├── parport_pc.h
+│   │   └── ppdev.h
+│   ├── list-of-files-ver-0.5.txt
+│   └── session-success-ada-ppdev-ver-0.5.txt
+├── exec
+├── obj
+└── src
+    ├── c-ada-ppdev
+    │   ├── ada_ppdev.c
+    │   └── ada_ppdev.h
+    ├── c-headers
+    │   └── ppdev.h
+    ├── main_ada_ppdev.adb
+    ├── pkg-ada-dtstamp
+    │   ├── pkg_ada_dtstamp.adb
+    │   └── pkg_ada_dtstamp.ads
+    └── pkg-ada-ppdev
+        └── pkg_ada_ppdev.ads
+
+10 directories, 23 files
+Ub2004-rt38:~$ 
+
+// ========================================================
+// ALHAMDULILLAH 3 TIMES WRY
+// ========================================================
+
