@@ -1,2 +1,5 @@
 # ada-ppdev
-Ada interface to ppdev, the userspace parallel port driver on linux
+Ada interface to ppdev, the user-space parallel port driver on linux.
+
+Wassalam.
+WRY
