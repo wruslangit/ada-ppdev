@@ -33,7 +33,7 @@ package body pkg_ada_dtstamp is
 	Fraction : ART.Time_Span;
     begin
 	ART.Split(RTNow, Seconds, Fraction);
-            declare
+        declare
             -- Duration is defined in Standard package.
 	    TFraction : constant String := Duration'Image(ART.To_Duration(Fraction));
 	    begin

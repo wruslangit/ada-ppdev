@@ -1,0 +1,7 @@
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/wks-gnat/ada-ppdev$ ls -al exec
+total 96
+drwxrwxr-x 2 wruslan wruslan  4096 Dec 17 22:16 .
+drwxrwxr-x 6 wruslan wruslan  4096 Dec 15 17:13 ..
+-rwxrwxr-x 1 wruslan wruslan 88656 Dec 17 22:16 main_ada_ppdev.xxx
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/wks-gnat/ada-ppdev$ 
+

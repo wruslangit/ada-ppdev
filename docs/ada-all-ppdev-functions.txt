@@ -1,13 +1,6 @@
-// File: all-ada-ppdev-functions-ver-0.5.txt
-// Date: Sun 13 Dec 2020 01:56:12 PM +08
-// Author: WRY
-// ========================================================
 
-// ppdev.h = User-space parallel port device driver (header file).
 
-// LOCATION OF FILE: /usr/include/uapi/linux/ppdev.h 
 
-// ========================================================
 /* Set mode for read/write (e.g. IEEE1284_MODE_EPP) */
 // DONE (11) #define PPSETMODE	_IOW(PP_IOCTL, 0x80, int)
 
@@ -18,13 +11,10 @@
 // DONE (9)  #define PPRCONTROL	_IOR(PP_IOCTL, 0x83, unsigned char)
 // DONE (10) #define PPWCONTROL	_IOW(PP_IOCTL, 0x84, unsigned char)
 
-/*
 struct ppdev_frob_struct {
 	unsigned char mask;
 	unsigned char val;
 };
-*/
-
 // DONE (4) (6) #define PPFCONTROL  _IOW(PP_IOCTL, 0x8e, struct ppdev_frob_struct)
 
 /* Read/write data */

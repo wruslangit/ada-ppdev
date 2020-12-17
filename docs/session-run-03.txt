@@ -1,0 +1,84 @@
+
+===========================================================
+gprbuild -d -P/home/wruslan/wks-gnat/ada-ppdev/gpr_ada_ppdev.gpr -s -k
+Compile
+   [Ada]          main_ada_ppdev.adb
+   [C]            Cada_ppdev.c
+   [Ada]          pkg_aada_ppdev.adb
+   [Ada]          pkg_ada_dtstamp.adb
+   [Ada]          pkg_ada_ppdev.ads
+Bind
+   [gprbind]      main_ada_ppdev.bexch
+   [Ada]          main_ada_ppdev.ali
+Link
+   [archive]      libgpr_ada_ppdev.a
+   [index]        libgpr_ada_ppdev.a
+   [link]         main_ada_ppdev.adb
+[2020-12-17 22:16:27] process terminated successfully, elapsed time: 01.57s
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/wks-gnat/ada-ppdev/exec$ sudo ./main_ada_ppdev.xxx 
+2020-12-17 14:16:56.44505248121 Bismillah 3 times WRY
+2020-12-17 14:16:56.44505285740 Running inside GNAT Studio Community (20200427)
+2020-12-17 14:16:56.44505307105 Success. OPEN parallel port = /dev/parport0, fd_ada = 3, fd_attrib_ada = 2 = O_RDWR 
+2020-12-17 14:16:56.44505376572 Success. PPCLAIM access to parport: the_port /dev/parport0 , fd_ada = 3 
+2020-12-17 14:16:56.44505560468 Get PPGETMODES parport capability modes: fd_ada = 3 port /dev/parport0 
+	PARALLEL PORT HARDWARE MODES: INT= 95 BIN= 01011111
+	PARPORT_MODE_PCSPP     00000001 
+	PARPORT_MODE_TRISTATE  00000010 
+	PARPORT_MODE_EPP       00000100 
+	PARPORT_MODE_ECP       00001000 
+	PARPORT_MODE_COMPAT    00010000 
+	PARPORT_MODE_SAFEININT 01000000 
+2020-12-17 14:16:56.44505660202 Set PPSETMODE for parport mode: fd_ada = 3, modetoset = 8 => PARPORT_MODE_ECP 
+2020-12-17 14:16:56.44505682929 Get PPGETMODE current parport mode: fd_ada = 3, the_mode: INT= 8 BIN= 00001000 = PARPORT_MODE_ECP 
+2020-12-17 14:16:56.44505709737 Set PPSETFLAGS for parport flags: fd_ada = 3, flagstoset = 12 =>  PP_FASTWRITE | PP_FASTREAD 
+2020-12-17 14:16:56.44505741502 Get PPGETFLAGS current parport flags: fd_ada = 3, the_flags: INT= 12 BIN= 00001100 =  PP_FASTWRITE | PP_FASTREAD 	
+2020-12-17 14:16:56.44505779113 Set PPSETPHASE for parport phase: fd_ada = 3, phasetoset = 9 => IEEE1284_PH_ECP_FWD_TO_REV 
+2020-12-17 14:16:56.44505806698 Get PPGETPHASE current parport phase: fd_ada = 3, the_phase: INT= 9 BIN= 00001001 = IEEE1284_PH_ECP_FWD_TO_REV 
+2020-12-17 14:16:56.44505840103 Set PPDATADIR parport data direction: fd_ada = 3, datadirection = 0 = PPDATADIR_OUT 
+2020-12-17 14:16:56.44505873499 Write	 PPWDATA 	: UCHAR= � 	INT= 138 	HEX= 0x8a 	BIN= 10001010
+2020-12-17 14:16:56.44505898762 Read	 PPRDATA 	: UCHAR= � 	INT= 138 	HEX= 0x8a 	BIN= 10001010
+2020-12-17 14:16:56.44505921336 Read	 PPRSTATUS 	: UCHAR= x 	INT= 120 	HEX= 0x78 	BIN= 01111000 ERROR: Unknown PARPORT_STATUS 
+2020-12-17 14:16:56.44505948209 Write	 PPWCONTROL 	: UCHAR= 	INT= 8 		HEX= 0x8 	BIN= 00001000
+2020-12-17 14:16:56.44505971522 Read	 PPRCONTROL 	: UCHAR= 	INT= 8 		HEX= 0x8 	BIN= 00001000 PARPORT_CONTROL_SELECT 
+2020-12-17 14:16:56.44505998970 Assert PPFCONTROL frob1 with frob.mask and frob.val = (OUTPUTENABLE). 
+2020-12-17 14:16:56.44506018731 Assert PPFCONTROL frob2 with frob.mask and frob.val = (OUTPUTENABLE | OUTPUTLATCH). 
+2020-12-17 14:16:56.44506036593 Set/Write control on interrupt occurance PPWCTLONIRQ. fd_ada = 3, IRQ = 5 
+2020-12-17 14:16:56.44506050939 Clear IRQ. Set IRQ = 0, on return IRQ count PPCLRIRQ. fd_ada = 3, IRQ = 0 
+2020-12-17 14:16:56.44506066307 Set/Write control on interrupt occurance PPWCTLONIRQ. fd_ada = 3, IRQ = 5 
+2020-12-17 14:16:56.44506081844 Negotiate/configure the_port for mode_ada = 8 = PARPORT_MODE_ECP 
+2020-12-17 14:16:56.44506105615 Yield the_port /dev/parport0, PPYIELD. 
+2020-12-17 14:16:56.44506121768 Get parport port time PPGETTIME. fd_ada = 3 
+	DATE-TIME-STAMP: 2020-12-17 22:16:56.446644 
+	TIME-FROM-EPOCH: seconds.microseconds = 1608214616.446644 
+2020-12-17 14:16:56.44506214800 Write stream data char-by-char to parport: 'Bismillah 3 times WRY.' 
+	Write	 PPWDATA 	: UCHAR= B 	INT= 66 	HEX= 0x42 	BIN= 01000010
+	Write	 PPWDATA 	: UCHAR= i 	INT= 105 	HEX= 0x69 	BIN= 01101001
+	Write	 PPWDATA 	: UCHAR= s 	INT= 115 	HEX= 0x73 	BIN= 01110011
+	Write	 PPWDATA 	: UCHAR= m 	INT= 109 	HEX= 0x6d 	BIN= 01101101
+	Write	 PPWDATA 	: UCHAR= i 	INT= 105 	HEX= 0x69 	BIN= 01101001
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= h 	INT= 104 	HEX= 0x68 	BIN= 01101000
+	Write	 PPWDATA 	: UCHAR=   	INT= 32 	HEX= 0x20 	BIN= 00100000
+	Write	 PPWDATA 	: UCHAR= 3 	INT= 51 	HEX= 0x33 	BIN= 00110011
+	Write	 PPWDATA 	: UCHAR=   	INT= 32 	HEX= 0x20 	BIN= 00100000
+	Write	 PPWDATA 	: UCHAR= t 	INT= 116 	HEX= 0x74 	BIN= 01110100
+	Write	 PPWDATA 	: UCHAR= i 	INT= 105 	HEX= 0x69 	BIN= 01101001
+	Write	 PPWDATA 	: UCHAR= m 	INT= 109 	HEX= 0x6d 	BIN= 01101101
+	Write	 PPWDATA 	: UCHAR= e 	INT= 101 	HEX= 0x65 	BIN= 01100101
+	Write	 PPWDATA 	: UCHAR= s 	INT= 115 	HEX= 0x73 	BIN= 01110011
+	Write	 PPWDATA 	: UCHAR=   	INT= 32 	HEX= 0x20 	BIN= 00100000
+	Write	 PPWDATA 	: UCHAR= W 	INT= 87 	HEX= 0x57 	BIN= 01010111
+	Write	 PPWDATA 	: UCHAR= R 	INT= 82 	HEX= 0x52 	BIN= 01010010
+	Write	 PPWDATA 	: UCHAR= Y 	INT= 89 	HEX= 0x59 	BIN= 01011001
+	Write	 PPWDATA 	: UCHAR= . 	INT= 46 	HEX= 0x2e 	BIN= 00101110
+2020-12-17 14:16:56.44506468710 Success. PPRELEASE the parport device: fd_ada = 3, port_ada = /dev/parport0 
+2020-12-17 14:16:56.44506490096 Success. CLOSE the parport device: fd_ada = 3, port_ada = /dev/parport0 
+
+2020-12-17 14:16:56.49555365034 Alhamdulillah 3 times WRY
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/wks-gnat/ada-ppdev/exec$ 
+===========================================================
+

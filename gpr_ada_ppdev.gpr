@@ -1,4 +1,4 @@
--- File	: ada_ppdev.gpr
+-- File	: gpr_ada_ppdev.gpr
 -- Date	: Sat 12 Dec 2020 01:32:03 PM +08
 -- Env	: Linux HPEliteBook8470p-Ub2004-rt38 5.4.66-rt38 
 -- #1 SMP PREEMPT_RT Sat Sep 26 16:51:59 +08 2020 x86_64 x86_64 x86_64 GNU/Linux
@@ -8,7 +8,7 @@
 -- GNAT 9.3.1 targetting x86_64-linux-gnu
 -- SPARK Community 2020 (20200818)
 
-project ada_ppdev is
+project gpr_ada_ppdev is
    -- for Languages   use ("Ada", "C", "C++");
    for Languages   use ("Ada", "C");
    for Source_Dirs use ("src/**");  -- Covers every subdirectory in src
@@ -93,7 +93,7 @@ project ada_ppdev is
            
    end IDE;
 
-end ada_ppdev;
+end gpr_ada_ppdev;
 -- ========================================================
 
 
