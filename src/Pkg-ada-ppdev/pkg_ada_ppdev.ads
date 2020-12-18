@@ -38,7 +38,7 @@ package pkg_ada_ppdev is
    -- SECTION ON ADA INTERFACE TO C-FUNCTIONS
    -- =====================================================
   -- (1)  
-  function GetC_ada_open_parport(the_port : in IFaceC.char_array; fd_attrib : in IFaceC.int) return IFaceC.int 
+  function GetC_ada_ioctl_open_parport(the_port : in IFaceC.char_array; fd_attrib : in IFaceC.int) return IFaceC.int 
      with Import => True, Convention => C, 
      External_Name => "ada_open_parport";
    
@@ -159,7 +159,7 @@ package pkg_ada_ppdev is
      External_Name => "ada_ioctl_pprelease_parport";      
    
   -- (24)
-  function GetC_ada_close_parport(fd : in IFaceC.int) return IFaceC.int 
+  function GetC_ada_ioctl_close_parport(fd : in IFaceC.int) return IFaceC.int 
      with Import => True, Convention => C, 
      External_Name => "ada_close_parport";
    

@@ -10,10 +10,10 @@
 #define _ADA_PPDEV_H_
 
 // ADDED BY WRY
-#include <time.h> 		   // For high-res timer clock_gettime with (nanoseconds)
+#include <time.h> 		 // For high-res timer clock_gettime with (nanoseconds)
 #include <sys/time.h>	 // For local date-time with (microseconds)
-#include <unistd.h>     // getcwd(), close(0
-#include <limits.h>     // perror()
+#include <unistd.h>      // getcwd(), close()
+#include <limits.h>      // perror()
 
 // ========================================================
 //-- (1) to (2)

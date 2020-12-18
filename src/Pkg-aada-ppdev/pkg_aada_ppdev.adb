@@ -7,7 +7,7 @@ package body pkg_aada_ppdev is
    function GetA_open_parport(port : in AIFaceC.char_array; fd_attrib : in AIFaceC.int) return AIFaceC.int is
    begin
 
-	   ret01 := PAPPDEV.GetC_ada_open_parport(port, fd_attrib);
+	   ret01 := PAPPDEV.GetC_ada_ioctl_open_parport(port, fd_attrib);
       if (ret01 = -1) then    -- fd must be nonzero to be a success
          AATIO.Put ("ERROR. OPEN PARPORT. GET_FILE_DESCRIPTOR: fd = ");
 		  AATIO.Put (AIFaceC.int'Image(ret01)); AATIO.New_Line;
@@ -350,7 +350,7 @@ package body pkg_aada_ppdev is
    function GetA_close_parport(fd : in AIFaceC.int) return AIFaceC.int is
    begin
 
-      ret24 := PAPPDEV.GetC_ada_close_parport(fd);
+      ret24 := PAPPDEV.GetC_ada_ioctl_close_parport(fd);
       if (ret24 /= 0) then
 		  AATIO.Put ("ERROR. CLOSE PARPORT: ret24 = ");
 		  AATIO.Put (AIFaceC.int'Image(ret24)); AATIO.New_Line;

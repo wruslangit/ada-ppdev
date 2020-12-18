@@ -1,0 +1,111 @@
+File: session-for-main_ada_test2_adb.txt
+Date: Sat 19 Dec 2020 12:57:28 AM +08
+Author : WRY wruslandr@gmail.com
+LOCAL_TIME (MYT) = ADA_TIME (UTC) +08  
+
+COMPILATION
+===========================================================
+gprbuild -d -P/home/wruslan/wks-gnat/ada-ppdev/gpr_ada_ppdev.gpr -s -k
+Compile
+   [Ada]          main_ada_test1.adb
+   [C]            Cada_ppdev.c
+   [Ada]          pkg_aada_ppdev.adb        <== NOT USED IN test2 
+   [Ada]          pkg_ada_dtstamp.adb
+   [Ada]          pkg_ada_ppdev.ads
+Bind
+   [gprbind]      main_ada_test1.bexch
+   [Ada]          main_ada_test1.ali
+Link
+   [archive]      libgpr_ada_ppdev.a
+   [index]        libgpr_ada_ppdev.a
+   [link]         main_ada_test1.adb
+[2020-12-19 00:55:50] process terminated successfully, elapsed time: 01.54s
+
+EXECUTION
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/wks-gnat/ada-ppdev/exec$ sudo ./main_ada_test1.xxx 
+[sudo] password for wruslan: 
+2020-12-18 16:59:08.67759394621 Bismillah 3 times WRY
+2020-12-18 16:59:08.67759431358 Running inside GNAT Studio Community (20200427)
+
+2020-12-18 16:59:08.67759443375 Success. OPEN parallel port = /dev/parport0, fd_ada = 3, fd_attrib_ada = 2 = O_RDWR 
+2020-12-18 16:59:08.67759484267 Success. PPCLAIM access to parport: the_port /dev/parport0 , fd_ada = 3 
+2020-12-18 16:59:08.67759625840 Set PPSETMODE for parport mode: fd_ada = 3, modetoset = 8 => PARPORT_MODE_ECP 
+2020-12-18 16:59:08.67759641633 Get PPGETMODE current parport mode: fd_ada = 3, the_mode: INT= 8 BIN= 00001000 = PARPORT_MODE_ECP 
+2020-12-18 16:59:08.67759655459 Set PPDATADIR parport data direction: fd_ada = 3, datadirection = 0 = PPDATADIR_OUT 
+2020-12-18 16:59:08.67759668653 Write stream data char-by-char to parport: 'Subhanallah Walhamdulillah Wala..ila..haillallah WallahHuakbar WRY.' 
+	Write	 PPWDATA 	: UCHAR= S 	INT= 83 	HEX= 0x53 	BIN= 01010011
+	Write	 PPWDATA 	: UCHAR= u 	INT= 117 	HEX= 0x75 	BIN= 01110101
+	Write	 PPWDATA 	: UCHAR= b 	INT= 98 	HEX= 0x62 	BIN= 01100010
+	Write	 PPWDATA 	: UCHAR= h 	INT= 104 	HEX= 0x68 	BIN= 01101000
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= n 	INT= 110 	HEX= 0x6e 	BIN= 01101110
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= h 	INT= 104 	HEX= 0x68 	BIN= 01101000
+	Write	 PPWDATA 	: UCHAR=   	INT= 32 	HEX= 0x20 	BIN= 00100000
+	Write	 PPWDATA 	: UCHAR= W 	INT= 87 	HEX= 0x57 	BIN= 01010111
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= h 	INT= 104 	HEX= 0x68 	BIN= 01101000
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= m 	INT= 109 	HEX= 0x6d 	BIN= 01101101
+	Write	 PPWDATA 	: UCHAR= d 	INT= 100 	HEX= 0x64 	BIN= 01100100
+	Write	 PPWDATA 	: UCHAR= u 	INT= 117 	HEX= 0x75 	BIN= 01110101
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= i 	INT= 105 	HEX= 0x69 	BIN= 01101001
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= h 	INT= 104 	HEX= 0x68 	BIN= 01101000
+	Write	 PPWDATA 	: UCHAR=   	INT= 32 	HEX= 0x20 	BIN= 00100000
+	Write	 PPWDATA 	: UCHAR= W 	INT= 87 	HEX= 0x57 	BIN= 01010111
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= . 	INT= 46 	HEX= 0x2e 	BIN= 00101110
+	Write	 PPWDATA 	: UCHAR= . 	INT= 46 	HEX= 0x2e 	BIN= 00101110
+	Write	 PPWDATA 	: UCHAR= i 	INT= 105 	HEX= 0x69 	BIN= 01101001
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= . 	INT= 46 	HEX= 0x2e 	BIN= 00101110
+	Write	 PPWDATA 	: UCHAR= . 	INT= 46 	HEX= 0x2e 	BIN= 00101110
+	Write	 PPWDATA 	: UCHAR= h 	INT= 104 	HEX= 0x68 	BIN= 01101000
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= i 	INT= 105 	HEX= 0x69 	BIN= 01101001
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= h 	INT= 104 	HEX= 0x68 	BIN= 01101000
+	Write	 PPWDATA 	: UCHAR=   	INT= 32 	HEX= 0x20 	BIN= 00100000
+	Write	 PPWDATA 	: UCHAR= W 	INT= 87 	HEX= 0x57 	BIN= 01010111
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= l 	INT= 108 	HEX= 0x6c 	BIN= 01101100
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= h 	INT= 104 	HEX= 0x68 	BIN= 01101000
+	Write	 PPWDATA 	: UCHAR= H 	INT= 72 	HEX= 0x48 	BIN= 01001000
+	Write	 PPWDATA 	: UCHAR= u 	INT= 117 	HEX= 0x75 	BIN= 01110101
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= k 	INT= 107 	HEX= 0x6b 	BIN= 01101011
+	Write	 PPWDATA 	: UCHAR= b 	INT= 98 	HEX= 0x62 	BIN= 01100010
+	Write	 PPWDATA 	: UCHAR= a 	INT= 97 	HEX= 0x61 	BIN= 01100001
+	Write	 PPWDATA 	: UCHAR= r 	INT= 114 	HEX= 0x72 	BIN= 01110010
+	Write	 PPWDATA 	: UCHAR=   	INT= 32 	HEX= 0x20 	BIN= 00100000
+	Write	 PPWDATA 	: UCHAR= W 	INT= 87 	HEX= 0x57 	BIN= 01010111
+	Write	 PPWDATA 	: UCHAR= R 	INT= 82 	HEX= 0x52 	BIN= 01010010
+	Write	 PPWDATA 	: UCHAR= Y 	INT= 89 	HEX= 0x59 	BIN= 01011001
+	Write	 PPWDATA 	: UCHAR= . 	INT= 46 	HEX= 0x2e 	BIN= 00101110
+2020-12-18 16:59:08.67760287550 Success. PPRELEASE the parport device: fd_ada = 3, port_ada = /dev/parport0 
+2020-12-18 16:59:08.67760305219 Success. CLOSE the parport device: fd_ada = 3, port_ada = /dev/parport0 
+
+2020-12-18 16:59:08.73811663317 Alhamdulillah 3 times WRY
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/wks-gnat/ada-ppdev/exec$ 
+
+===========================================================
+

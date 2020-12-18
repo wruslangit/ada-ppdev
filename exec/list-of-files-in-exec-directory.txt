@@ -1,0 +1,9 @@
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-ppdev/exec$ ls -al
+total 264
+drwxrwxr-x 2 wruslan wruslan  4096 Dec 19 01:23 .
+drwxrwxr-x 8 wruslan wruslan  4096 Dec 19 01:22 ..
+-rwxrwxr-x 1 wruslan wruslan 88656 Dec 19 01:11 main_ada_ppdev.xxx
+-rwxrwxr-x 1 wruslan wruslan 88656 Dec 19 00:55 main_ada_test1.xxx
+-rwxrwxr-x 1 wruslan wruslan 72904 Dec 19 00:32 main_ada_test2.xxx
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-ppdev/exec$ 
+

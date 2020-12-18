@@ -1,0 +1,59 @@
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-ppdev/obj$ ls -al
+total 524
+drwxrwxr-x 2 wruslan wruslan  4096 Dec 19 01:20 .
+drwxrwxr-x 8 wruslan wruslan  4096 Dec 19 01:22 ..
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 15 17:10 ada_ppdev.c.stderr
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 15 17:10 ada_ppdev.c.stdout
+-rw-rw-r-- 1 wruslan wruslan    46 Dec 15 17:10 ada_ppdev.cswi
+-rw-rw-r-- 1 wruslan wruslan   167 Dec 15 17:10 ada_ppdev.d
+-rw-rw-r-- 1 wruslan wruslan   546 Dec 15 17:14 ada_ppdev-loc.xml
+-rw-rw-r-- 1 wruslan wruslan 32248 Dec 15 17:10 ada_ppdev.o
+-rw-rw-r-- 1 wruslan wruslan 10380 Dec 19 01:11 b__main_ada_ppdev.adb
+-rw-rw-r-- 1 wruslan wruslan 23992 Dec 19 01:11 b__main_ada_ppdev.ads
+-rw-rw-r-- 1 wruslan wruslan 11806 Dec 19 01:11 b__main_ada_ppdev.ali
+-rw-rw-r-- 1 wruslan wruslan 20120 Dec 19 01:11 b__main_ada_ppdev.o
+-rw-rw-r-- 1 wruslan wruslan 10380 Dec 19 00:55 b__main_ada_test1.adb
+-rw-rw-r-- 1 wruslan wruslan 23992 Dec 19 00:55 b__main_ada_test1.ads
+-rw-rw-r-- 1 wruslan wruslan 11806 Dec 19 00:55 b__main_ada_test1.ali
+-rw-rw-r-- 1 wruslan wruslan 20120 Dec 19 00:55 b__main_ada_test1.o
+-rw-rw-r-- 1 wruslan wruslan 10190 Dec 19 00:32 b__main_ada_test2.adb
+-rw-rw-r-- 1 wruslan wruslan 23748 Dec 19 00:32 b__main_ada_test2.ads
+-rw-rw-r-- 1 wruslan wruslan 11688 Dec 19 00:32 b__main_ada_test2.ali
+-rw-rw-r-- 1 wruslan wruslan 19840 Dec 19 00:32 b__main_ada_test2.o
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 19 01:11 Cada_ppdev.c.stderr
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 19 01:11 Cada_ppdev.c.stdout
+-rw-rw-r-- 1 wruslan wruslan    46 Dec 19 01:11 Cada_ppdev.cswi
+-rw-rw-r-- 1 wruslan wruslan   170 Dec 19 01:11 Cada_ppdev.d
+-rw-rw-r-- 1 wruslan wruslan 33160 Dec 19 01:11 Cada_ppdev.o
+-rw-rw-r-- 1 wruslan wruslan 35580 Dec 18 22:55 clang_ref_cache.db
+-rw-rw-r-- 1 wruslan wruslan  4270 Dec 19 00:46 gpr_ada_ppdev-loc.xml
+-rw-rw-r-- 1 wruslan wruslan  3838 Dec 19 00:46 gpsauto.cgpr
+-rw-rw-r-- 1 wruslan wruslan 34522 Dec 19 01:11 libgpr_ada_ppdev.a
+-rw-rw-r-- 1 wruslan wruslan    65 Dec 19 01:11 libgpr_ada_ppdev.deps
+-rw-rw-r-- 1 wruslan wruslan  3026 Dec 17 22:24 list-of-files-in-obj-session-run-03.txt
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 19 01:11 main_ada_ppdev.adb.stderr
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 19 01:11 main_ada_ppdev.adb.stdout
+-rw-rw-r-- 1 wruslan wruslan  6732 Dec 19 01:11 main_ada_ppdev.ali
+-rw-rw-r-- 1 wruslan wruslan   725 Dec 19 01:11 main_ada_ppdev.bexch
+-rw-rw-r-- 1 wruslan wruslan    45 Dec 19 01:11 main_ada_ppdev.cswi
+-rw-rw-r-- 1 wruslan wruslan 11488 Dec 19 01:11 main_ada_ppdev.o
+-rw-rw-r-- 1 wruslan wruslan   725 Dec 19 00:55 main_ada_test1.bexch
+-rw-rw-r-- 1 wruslan wruslan   671 Dec 19 00:32 main_ada_test2.bexch
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 19 01:11 pkg_aada_ppdev.adb.stderr
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 19 01:11 pkg_aada_ppdev.adb.stdout
+-rw-rw-r-- 1 wruslan wruslan 15479 Dec 19 01:11 pkg_aada_ppdev.ali
+-rw-rw-r-- 1 wruslan wruslan    45 Dec 19 01:11 pkg_aada_ppdev.cswi
+-rw-rw-r-- 1 wruslan wruslan 28016 Dec 19 01:11 pkg_aada_ppdev.o
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 19 01:11 pkg_ada_dtstamp.adb.stderr
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 19 01:11 pkg_ada_dtstamp.adb.stdout
+-rw-rw-r-- 1 wruslan wruslan  7255 Dec 19 01:11 pkg_ada_dtstamp.ali
+-rw-rw-r-- 1 wruslan wruslan    45 Dec 19 01:11 pkg_ada_dtstamp.cswi
+-rw-rw-r-- 1 wruslan wruslan 19232 Dec 19 01:11 pkg_ada_dtstamp.o
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 19 01:11 pkg_ada_ppdev.ads.stderr
+-rw-rw-r-- 1 wruslan wruslan     0 Dec 19 01:11 pkg_ada_ppdev.ads.stdout
+-rw-rw-r-- 1 wruslan wruslan  4321 Dec 19 01:11 pkg_ada_ppdev.ali
+-rw-rw-r-- 1 wruslan wruslan    45 Dec 19 01:11 pkg_ada_ppdev.cswi
+-rw-rw-r-- 1 wruslan wruslan   984 Dec 19 01:11 pkg_ada_ppdev.o
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-ppdev/obj$ 
+
+

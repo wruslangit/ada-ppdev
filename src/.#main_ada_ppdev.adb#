@@ -135,8 +135,7 @@ begin
    
    PADTS.dtstamp; ret21 := PAAPPDEV.GetA_ppyield_parport (fd);
    PADTS.dtstamp; ret22 := PAAPPDEV.GetA_ppgettime_usec_parport (fd);
-   
-   
+    
    -- TEST WRITE STREAM DATA
    -- stream_datatowrite := "Bismillah 3 times WRY."  
    PADTS.dtstamp; ret11:= PAAPPDEV.GetA_streamdata_writedataregister (fd, stream_datatowrite);
