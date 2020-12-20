@@ -1028,7 +1028,7 @@ return(result24);
 int ada_ioctl_ppexcl_parport(int fd_ada) {
 // ========================================================
 /* Register device exclusively (must be before PPCLAIM). */
-// (13) #define PPEXCL		_IO(PP_IOCTL, 0x8f)
+// #define PPEXCL		_IO(PP_IOCTL, 0x8f)
 // PPEXCL    : IFaceC.int := 143;	-- HEX 0x8f
   
   int resultX1 = ioctl(fd_ada, PPEXCL);
@@ -1047,17 +1047,11 @@ return(resultX1);
 int ada_ioctl_ppsettime_timeoutparport(int fd_ada, int timeout) {
 // ========================================================
 /* Set and get port timeout (struct timeval's) */
-// (19) #define PPSETTIME	_IOW(PP_IOCTL, 0x96, struct timeval) <=== IMPORTANT
+// #define PPSETTIME	_IOW(PP_IOCTL, 0x96, struct timeval) <=== IMPORTANT
 
 // Set and get port timeout (struct timeval's) 
 // PPSETTIME : IFaceC.int := 150; -- HEX 0x96
-/*
-  gettimeofday(&current_time, NULL);
-  printf("Get parport port time PPGETTIME. fd_ada = %d \n", fd_ada);
-  printf("\tDATE-TIME-STAMP: %s", the_strbuffer1);
-  printf(".%06ld \n", (long int)current_time.tv_usec);  
-  
-*/  
+
 int resultX2 = ioctl(fd_ada, PPSETTIME, &timeout);
 if (resultX2 != 0)
   {

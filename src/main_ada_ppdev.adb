@@ -10,10 +10,21 @@
 
 -- ADA STANDARD PACKAGES
 with Ada.Text_IO;
-with Interfaces.C; 
-use  Interfaces.C; 
-with Interfaces.C.Extensions;
-use  Interfaces.C.Extensions;
+with Interfaces.C; use  Interfaces.C; 
+with Interfaces.C.Extensions; use  Interfaces.C.Extensions;
+with Ada.Calendar;
+with Ada.Calendar.Formatting;
+with Ada.Real_Time; use Ada.Real_Time;
+
+-- ADA STRING MANIPULATION
+-- Ada has three(3) types of strings:
+-- fixed length, bounded length, unbounded.
+with Ada.Strings;
+with Ada.Strings.Fixed;
+with Ada.Strings.Bounded;
+with Ada.Strings.Unbounded;
+with Ada.Strings.Unbounded.Text_IO;
+with Ada.Command_Line;
 
 -- WRY CREATED PACKAGES 
 with pkg_ada_dtstamp;
@@ -22,11 +33,23 @@ with pkg_aada_ppdev;   -- FOR main_ada_test2.adb
 
 procedure main_ada_ppdev is
    
--- RENAMING PACKAGES FOR CONVENIENCE
+   -- RENAMING STANDARD PACKAGES FOR CONVENIENCE
    package ATIO    renames Ada.Text_IO;
    package IFaceC  renames Interfaces.C;
    package IFaceCE renames Interfaces.C.Extensions;
+   package ACal    renames Ada.Calendar;
+   package ACalF   renames Ada.Calendar.Formatting;
+   package ART     renames Ada.Real_Time;
    
+   -- RENAMING ADA STRING PACKAGES
+   package AS     renames Ada.Strings;
+   package ASF    renames Ada.Strings.Fixed;
+   package ASB    renames Ada.Strings.Bounded;
+   package ASU    renames Ada.Strings.Unbounded;
+   package ASUTIO renames Ada.Strings.Unbounded.Text_IO;
+   package ACL    renames Ada.Command_Line;  
+   
+   -- RENAMING WRY CREATED PACKAGES
    package PADTS    renames pkg_ada_dtstamp;
    -- package PAPPDEV renames pkg_ada_ppdev;  -- FOR main_ada_test2.adb
    package PAAPPDEV renames pkg_aada_ppdev;   -- FOR main_ada_test1.adb
@@ -71,12 +94,16 @@ procedure main_ada_ppdev is
    
    stream_datatowrite : IFaceC.char_array := "Bismillah 3 times WRY.";
    
+   -- RTNow : ART.Time;
+   -- datestring : ASU.Unbounded_String; -- no initialization needed, default empty
+   -- timestring : ASU.Unbounded_String; -- no initialization needed, default empty
+   
 begin
      
    PADTS.dtstamp; ATIO.Put_Line ("Bismillah 3 times WRY");
    PADTS.dtstamp; ATIO.Put_Line ("Running inside GNAT Studio Community (20200427)");
-   -- ========================================================   
-   
+   -- =====================================================   
+      
    -- VALID FD ATTRIBUTE VALUES = {0, 1, 2, 3, ..}
    fd_attrib := 2; -- for O_RDWR; 
    PADTS.dtstamp; ret01 := PAAPPDEV.GetA_open_parport(port, fd_attrib);
@@ -135,8 +162,7 @@ begin
    
    PADTS.dtstamp; ret21 := PAAPPDEV.GetA_ppyield_parport (fd);
    PADTS.dtstamp; ret22 := PAAPPDEV.GetA_ppgettime_usec_parport (fd);
-   
-   
+    
    -- TEST WRITE STREAM DATA
    -- stream_datatowrite := "Bismillah 3 times WRY."  
    PADTS.dtstamp; ret11:= PAAPPDEV.GetA_streamdata_writedataregister (fd, stream_datatowrite);
